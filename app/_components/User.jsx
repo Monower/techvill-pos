@@ -4,7 +4,7 @@ const User = () => {
     return (
         <>
             {/* You can open the modal using document.getElementById('ID').showModal() method */}
-            <button className="w-full p-2 bg-indigo-100 flex justify-between rounded" onClick={() => document.getElementById('my_modal_3').showModal()}>
+            <button className="w-full p-2 bg-indigo-100 flex justify-between rounded mb-3" onClick={() => document.getElementById('my_modal_3').showModal()}>
                 <span className="flex items-center space-x-2">
                     <svg className="w-6 h-6 fill-indigo-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M399 384.2C376.9 345.8 335.4 320 288 320H224c-47.4 0-88.9 25.8-111 64.2c35.2 39.2 86.2 63.8 143 63.8s107.8-24.7 143-63.8zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm256 16a72 72 0 1 0 0-144 72 72 0 1 0 0 144z" /></svg>
                     <span className="text-indigo-600 font-medium">
