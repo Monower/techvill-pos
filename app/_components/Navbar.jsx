@@ -1,6 +1,6 @@
 const Navbar = () => {
     return (
-        <section className="container mx-auto px-2 lg:px-4 py-2 flex justify-between items-center">
+        <section className=" flex justify-between items-center pb-3">
             <div className="">
                 <input id="my-drawer" type="checkbox" className="drawer-toggle" />
                 <div className="">
