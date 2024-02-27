@@ -4,17 +4,17 @@ import Item from "./Item";
 
 const Challan = (prop) => {
     return (<>
-        <div className="w-1/2 border-r border-gray-500 pr-4">
+        <div className="lg:w-1/2 lg:border-r border-gray-500 lg:pr-4 pb-5 lg:pb-0">
             <Navbar />
             <User />
             <div className="pb-6">
-                <div className="pb-6">
+                <div className="pb-6 mx-2 lg:mx-0">
                     <Item />
                     <Item />
                     <Item />
                     <Item />
                 </div>
-                <div className="flex justify-end pb-6">
+                <div className="flex justify-end pb-6 mx-2 lg:mx-0">
                     <div className="flex flex-col justify-between w-[41%] mr-2">
                         <div className="w-full flex justify-between py-2 border-y">
                             <span className="text-gray-500 text-[14px] font-medium">
@@ -50,7 +50,7 @@ const Challan = (prop) => {
                         </div>
                     </div>
                 </div>
-                <div className="flex justify-between  bg-indigo-100 p-2 text-indigo-600">
+                <div className="flex justify-between  bg-indigo-100 p-2 text-indigo-600 mx-2 lg:mx-0">
                     <p className="text-[13px]">Products Count (13)</p>
                     <div className="w-[41%] flex justify-between font-bold text-[18px]">
                         <h3>Total</h3>
@@ -58,7 +58,7 @@ const Challan = (prop) => {
                     </div>
                 </div>
             </div>
-            <div className="flex justify-between">
+            <div className="mx-2 lg:mx-0 gap-4 lg:gap-0 flex flex-col lg:flex-row justify-between">
                 <button className="text-red-500 bg-red-100  rounded inline-flex items-center space-x-2 p-2 shadow-md">
                     <span>
                         <svg className="w-4 h-4 fill-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z" /></svg>

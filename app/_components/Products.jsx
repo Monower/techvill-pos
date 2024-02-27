@@ -2,8 +2,8 @@ import ProductCard from "./ProductCard";
 
 const Products = () => {
     return (
-        <section className="w-1/2">
-            <form action="#" className="w-full bg-white shadow-lg pl-6 py-2 mb-5">
+        <section className="lg:w-1/2">
+            <form action="#" className="w-full bg-white shadow-lg pl-6 py-2 mb-5 mx-2 lg:mx-0">
                 <div className="flex items-center space-x-3">
                     <label htmlFor="search">
                         <svg className="w-5 h-5 fill-slate-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" /></svg>
@@ -12,20 +12,20 @@ const Products = () => {
                 </div>
             </form>
             <div className="px-6 pb-6">
-                <div className="flex items-center justify-between">
-                    <div className="text-slate-700 font-medium p-2 border-2 border-gray-500 text-[14px] rounded">
+                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 lg:gap-0">
+                    <div className="text-slate-700 font-medium p-2 border-2 border-gray-500 text-[14px] rounded w-full lg:w-auto">
                         All Categories
                     </div>
-                    <div className="text-slate-700 font-medium p-2 border-2 border-gray-500 text-[14px] rounded">
+                    <div className="text-slate-700 font-medium p-2 border-2 border-gray-500 text-[14px] rounded w-full lg:w-auto">
                         Men
                     </div>
-                    <div className="text-slate-700 font-medium p-2 border-2 border-gray-500 text-[14px] rounded">
+                    <div className="text-slate-700 font-medium p-2 border-2 border-gray-500 text-[14px] rounded w-full lg:w-auto">
                         Women
                     </div>
-                    <div className="text-slate-700 font-medium p-2 border-2 border-gray-500 text-[14px] rounded">
+                    <div className="text-slate-700 font-medium p-2 border-2 border-gray-500 text-[14px] rounded w-full lg:w-auto">
                         Children
                     </div>
-                    <div className="text-slate-700 font-medium p-2 border-2 border-gray-500 text-[14px] rounded">
+                    <div className="text-slate-700 font-medium p-2 border-2 border-gray-500 text-[14px] rounded w-full lg:w-auto">
                         Electronics
                     </div>
                     <div>
@@ -47,7 +47,7 @@ const Products = () => {
                     </div>
                 </div>
             </div>
-            <div className="px-6 grid grid-cols-4 gap-4">
+            <div className="px-6 grid grid-cols-2 lg:grid-cols-4 gap-4">
                 <ProductCard product={{
                     id: 1,
                     title: "Product 1",

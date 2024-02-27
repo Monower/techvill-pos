@@ -8,7 +8,7 @@ import Payment from "./_components/Payment";
 const Home = () => {
   const [payment, setPayment] = useState(false);
   return (<>
-    <section className="container mx-auto flex justify-between py-1">
+    <section className="container mx-auto flex flex-col lg:flex-row justify-between py-1">
       <Challan setPayment={setPayment} />
       {
         payment ? <Payment setPayment={setPayment} /> : <Products />
