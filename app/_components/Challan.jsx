@@ -1,18 +1,24 @@
+'use client';
+
+import { useState } from "react";
 import Navbar from "./Navbar";
 import User from "./User";
 import Item from "./Item";
 
 const Challan = (prop) => {
+    const [total, setTotal] = useState(0);
+    const TAX = 25.50;
+    const SHIPPING = 5.50;
+    const CART_DISCOUNT = 10;
     return (<>
         <div className="lg:w-1/2 lg:border-r border-gray-500 lg:pr-4 pb-5 lg:pb-0">
             <Navbar />
             <User />
             <div className="pb-6">
                 <div className="pb-6 mx-2 lg:mx-0">
-                    <Item />
-                    <Item />
-                    <Item />
-                    <Item />
+                    {
+                        prop?.cart?.map((item) => <Item setTotal={setTotal} key={item?.id} name={item?.title} price={item?.price} />)
+                    }
                 </div>
                 <div className="flex justify-end pb-6 mx-2 lg:mx-0">
                     <div className="flex flex-col justify-between w-[41%] mr-2">
@@ -21,7 +27,7 @@ const Challan = (prop) => {
                                 Sub Total
                             </span>
                             <span className="text-slate-700 font-medium">
-                                $5025.50
+                                ${ total }
                             </span>
                         </div>
                         <div className="w-full flex justify-between py-2 border-y">
@@ -29,7 +35,7 @@ const Challan = (prop) => {
                                 TAX
                             </span>
                             <span className="text-slate-700 font-medium">
-                                $25.50
+                                ${ TAX }
                             </span>
                         </div>
                         <div className="w-full flex justify-between py-2 border-y">
@@ -37,7 +43,7 @@ const Challan = (prop) => {
                                 Shipping
                             </span>
                             <span className="text-slate-700 font-medium">
-                                $5.50
+                                ${ SHIPPING }
                             </span>
                         </div>
                         <div className="w-full flex justify-between py-2 border-y">
@@ -45,16 +51,16 @@ const Challan = (prop) => {
                                 Discount on Cart
                             </span>
                             <span className="text-slate-700 font-medium">
-                                $10.00
+                                ${ CART_DISCOUNT }
                             </span>
                         </div>
                     </div>
                 </div>
                 <div className="flex justify-between  bg-indigo-100 p-2 text-indigo-600 mx-2 lg:mx-0">
-                    <p className="text-[13px]">Products Count (13)</p>
+                    <p className="text-[13px]">Products Count ({ prop?.cart?.length })</p>
                     <div className="w-[41%] flex justify-between font-bold text-[18px]">
                         <h3>Total</h3>
-                        <h3>$5005.50</h3>
+                        <h3>${ total + TAX + SHIPPING - CART_DISCOUNT }</h3>
                     </div>
                 </div>
             </div>

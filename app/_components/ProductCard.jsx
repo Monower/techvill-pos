@@ -1,6 +1,6 @@
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, setCart }) => {
     return (
-        <div className="group relative border rounded">
+        <div onClick={() => { setCart((prev) => [...prev, product]) }} className="group relative border rounded">
             <div className="w-full  bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75  lg:aspect-none">
                 <img
                     src={product.image}

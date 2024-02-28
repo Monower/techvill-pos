@@ -1,6 +1,6 @@
 import ProductCard from "./ProductCard";
 
-const Products = () => {
+const Products = ({ setCart }) => {
     return (
         <section className="lg:w-1/2">
             <form action="#" className="w-full bg-white shadow-lg pl-6 py-2 mb-5 mx-2 lg:mx-0">
@@ -48,52 +48,32 @@ const Products = () => {
                 </div>
             </div>
             <div className="px-6 grid grid-cols-2 lg:grid-cols-4 gap-4">
-                <ProductCard product={{
+                <ProductCard setCart={setCart} product={{
                     id: 1,
                     title: "Product 1",
                     href: "#",
                     image: "/product1.webp",
-                    price: "$120.00",
+                    price: 10.00,
                     color: "Gray",
                     size: "XXL",
                     inStock: true
                 }} />
-                <ProductCard product={{
-                    id: 1,
-                    title: "Product 1",
+                <ProductCard setCart={setCart} product={{
+                    id: 2,
+                    title: "Product 2",
                     href: "#",
                     image: "/product1.webp",
-                    price: "$120.00",
+                    price: 20.00,
                     color: "Gray",
                     size: "XXL",
                     inStock: true
                 }} />
-                <ProductCard product={{
-                    id: 1,
-                    title: "Product 1",
+                <ProductCard setCart={setCart} product={{
+                    id: 3,
+                    title: "Product 3",
                     href: "#",
                     image: "/product1.webp",
-                    price: "$120.00",
-                    color: "Gray",
-                    size: "XXL",
-                    inStock: true
-                }} />
-                <ProductCard product={{
-                    id: 1,
-                    title: "Product 1",
-                    href: "#",
-                    image: "/product1.webp",
-                    price: "$120.00",
-                    color: "Gray",
-                    size: "XXL",
-                    inStock: true
-                }} />
-                <ProductCard product={{
-                    id: 1,
-                    title: "Product 1",
-                    href: "#",
-                    image: "/product1.webp",
-                    price: "$120.00",
+                    price: 30.00,
                     color: "Gray",
                     size: "XXL",
                     inStock: true

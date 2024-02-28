@@ -1,16 +1,22 @@
 'use client'
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-const Item = () => {
+const Item = ({ name, price, setTotal }) => {
     const [count, setCount] = useState(1);
-    const basePrice = 45.50;
+
+    useEffect(() => {
+        setTotal((prev) => { 
+            console.log(prev + price * count);
+            return prev + (price * count)
+        })
+    }, [count])
     return (
         <div className="w-full p-2 border  flex justify-between rounded  text-gray-500 font-medium">
             <span>
-                Polo
+                { name }
             </span>
             <span>
-                ${parseFloat(basePrice).toFixed(2)}
+                ${parseFloat( price ).toFixed(2)}
             </span>
             <span className="flex items-center space-x-2">
                 <button onClick={() => { 
@@ -26,7 +32,7 @@ const Item = () => {
                 </button>
             </span>
             <span>
-                ${ parseFloat(basePrice * count).toFixed(2) }
+                ${parseFloat(price * count).toFixed(2) }
             </span>
         </div>
     )
